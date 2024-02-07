@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center>
+<h3>Login</h3>
+
+    <form method="POST" enctype="multipart/form-data">
+<!--    enctype using file uploading-->
+    {% csrf_token %}
+
+<div class="mb-3">
+  <label class="form-label">Username</label>
+  <input type="text" name="n" class="form-control" placeholder="Enter the name">
+</div>
+        <div class="mb-3">
+  <label class="form-label">Password</label>
+  <input type="password" class="form-control" name="d" placeholder="Enter the password">
+</div>
+        <div class="mb-3">
+    <input type="submit" class="form-control btn btn-primary" value="login">
+</div>
+    </form>
+    </center>
+{% endblock %}
